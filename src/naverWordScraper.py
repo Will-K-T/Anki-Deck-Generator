@@ -6,10 +6,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
 import time
 
-# Sets up selenium with the proper options so that Naver automatically logs in
-ser = Service("C:/Users/21wil/Documents/chromedriver.exe")
+# Sets up chromium with the proper options so that Naver automatically logs in
+ser = Service("../chromium/chromedriver.exe")
 op = webdriver.ChromeOptions()
-op.add_argument("--user-data-dir=C:\\Users\\21wil\\Documents\\SeleniumUserData")
+op.add_argument("--user-data-dir=C:\\Users\\21wil\\Documents\\GitHub\\Anki-Deck-Generator\\src\\user_data")
 op.page_load_strategy = 'normal'
 driver = webdriver.Chrome(service=ser, options=op)
 
